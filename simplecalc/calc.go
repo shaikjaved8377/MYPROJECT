@@ -17,4 +17,5 @@ func Divide(a, b int) float64 {
 		return 0 // Handle division by zero
 	}
 	return float64(a) / float64(b)
+
 }

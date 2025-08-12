@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	i := 5
+	i := 6
 	j := &i
 	fmt.Println("Value of i:", i)
 	fmt.Println("Address of i:", &i)
