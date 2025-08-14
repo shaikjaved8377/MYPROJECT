@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	//"simplecalc"
 )
 
+// example for pointers
 func main() {
 	i := 6
 	j := &i
@@ -14,10 +14,7 @@ func main() {
 	fmt.Println("Value pointed to by j:", *j)
 	*j = 10
 	fmt.Println("New value of i:", i)
-}
 
-/*
-func main() {
 	day := 1 // write switch case statement to print day of the week
 
 	switch day {
@@ -38,11 +35,9 @@ func main() {
 	default:
 		fmt.Println("Invalid day")
 	}
-}
 
-/*
-// write if else if else statements
-func main() {
+	// write if else if else statements
+
 	a := 10
 	if a > 0 {
 		fmt.Println(a, "is positive")
@@ -51,35 +46,29 @@ func main() {
 	} else {
 		fmt.Println(a, "is zero")
 	}
-}
 
-/*
-// write if else statements
-func main() {
-	a := 10
+	// write if else statements
+
 	if a%2 == 0 {
 		fmt.Println(a, "is even")
 	} else {
 		fmt.Println(a, "is odd")
 	}
-}
 
-/*
-func main() {      //write for loo
+	//write for loo
 	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}
-}
-*/
 
-/*
-func main() {
 	fmt.Println("Hello, World!")
 
 	a, b := 5, 3
-	fmt.Println(simplecalc.Add(a, b))
-	fmt.Println(simplecalc.Subtract(a, b))
-	fmt.Println(simplecalc.Multiply(a, b))
-	fmt.Println(simplecalc.Divide(a, b))
+	fmt.Println("Addition:", a+b)
+	fmt.Println("Subtraction:", a-b)
+	fmt.Println("Multiplication:", a*b)
+	if b != 0 {
+		fmt.Println("Division:", a/b)
+	} else {
+		fmt.Println("Division by zero error")
+	}
 }
-*/
