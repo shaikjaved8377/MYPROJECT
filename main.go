@@ -2,6 +2,78 @@ package main
 
 import "fmt"
 
+// using maps concepts
+func main() {
+
+	products := make(map[string]string)
+
+	products["product1"] = "chocolate"
+	products["product2"] = "chips"
+	products["product3"] = "soda"
+
+	fmt.Println("Products:", products)
+
+	// now im going to Add the product
+	products["product4"] = "cookies"
+	fmt.Println("after adding new Product:", products)
+
+	//now im going to update the product
+	products["product1"] = "chocolate bar"
+	fmt.Println("after updating product1:", products)
+
+	//now im going to delete the product
+	delete(products, "product2")
+	fmt.Println("after deleting product2:", products)
+
+	// now im going to check if the product exists
+	if value, exists := products["product3"]; exists {
+		fmt.Println("product3 exists with value:", value)
+	} else {
+		fmt.Println("product3 does not exist")
+	}
+	// iterating over the map
+	for key, value := range products {
+		fmt.Println(key, value)
+	}
+
+	// pointers with functions stocks
+	applePrice := 10
+
+	fmt.Println("Before stock increase:", applePrice)
+
+	StockPriceInc(&applePrice)
+	fmt.Println("After stock increase:", applePrice)
+
+	//now im using methods concepts
+	P := Product{
+		Name:  "Macbook Pro",
+		Price: 1000.00,
+	}
+
+	fmt.Println("Product Name:", P.Name)
+	fmt.Println("Product Actual price:", P.Price)
+	fmt.Println("Product After discount:", P.ApplyDiscount())
+
+}
+
+func StockPriceInc(appleprice *int) {
+	*appleprice = *appleprice + 20
+
+}
+
+type Product struct {
+	Name  string
+	Price float64
+}
+
+func (p Product) ApplyDiscount() float64 {
+	return p.Price * 0.9
+}
+
+/*
+
+
+
 type Person struct {
 	Name    string
 	Age     int
