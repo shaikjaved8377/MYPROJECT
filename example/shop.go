@@ -18,8 +18,8 @@ func Shop() {
 	products["product1"] = "potato"
 	fmt.Println("After updating product1:", products)
 
-	for i, k := range products {
-		fmt.Println(i, k)
+	for s, k := range products {
+		fmt.Println(s, k)
 	}
 
 }
