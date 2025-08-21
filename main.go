@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"myproject/example"
+)
 
 // using maps concepts
 func main() {
+
+	example.Shop()
 
 	products := make(map[string]string)
 
